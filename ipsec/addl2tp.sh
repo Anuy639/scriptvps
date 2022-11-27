@@ -14,13 +14,25 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Anuy639/perizinan/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp : 085349326511"
+echo -e "${NC}${LIGHT}Youtube : youtube.com/@nyarigratisan"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
+exit 0
+fi
 clear
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 else
 PUBLIC_IP=$IP
 fi
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/anuy639/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -28,7 +40,7 @@ domain=$IP2
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/akbarstorevpn/data-user-l2tp | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/anuy639/data-user-l2tp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -54,7 +66,7 @@ EOF
 
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
-echo -e "### $VPN_USER $exp">>"/var/lib/akbarstorevpn/data-user-l2tp"
+echo -e "### $VPN_USER $exp">>"/var/lib/anuy639/data-user-l2tp"
 cat <<EOF
 
 ============================
