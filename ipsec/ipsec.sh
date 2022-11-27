@@ -18,9 +18,21 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Anuy639/perizinan/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp : 085349326511"
+echo -e "${NC}${LIGHT}Youtube : youtube.com/@nyarigratisan"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
+exit 0
+fi
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/AkbarStoreVPN/scriptvps/main/ipsec"
+anuyvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/ipsec"
 
 VPN_IPSEC_PSK='myvpn'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
@@ -294,12 +306,12 @@ mkdir -p /run/pluto
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
-wget -O /usr/bin/addl2tp https://${akbarvpn}/addl2tp.sh && chmod +x /usr/bin/addl2tp
-wget -O /usr/bin/dell2tp https://${akbarvpn}/dell2tp.sh && chmod +x /usr/bin/dell2tp
-wget -O /usr/bin/addpptp https://${akbarvpn}/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp https://${akbarvpn}/delpptp.sh && chmod +x /usr/bin/delpptp
-wget -O /usr/bin/renewpptp https://${akbarvpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
-wget -O /usr/bin/renewl2tp https://${akbarvpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-touch /var/lib/akbarstorevpn/data-user-l2tp
-touch /var/lib/akbarstorevpn/data-user-pptp
+wget -O /usr/bin/addl2tp https://${anuyvpn}/addl2tp.sh && chmod +x /usr/bin/addl2tp
+wget -O /usr/bin/dell2tp https://${anuyvpn}/dell2tp.sh && chmod +x /usr/bin/dell2tp
+wget -O /usr/bin/addpptp https://${anuyvpn}/addpptp.sh && chmod +x /usr/bin/addpptp
+wget -O /usr/bin/delpptp https://${anuyvpn}/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/renewpptp https://${anuyvpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
+wget -O /usr/bin/renewl2tp https://${anuyvpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
+touch /var/lib/anuy639/data-user-l2tp
+touch /var/lib/anuy639/data-user-pptp
 rm -f /root/ipsec.sh
