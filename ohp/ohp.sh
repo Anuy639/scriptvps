@@ -15,6 +15,18 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/Anuy639/perizinan/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp : 085349326511"
+echo -e "${NC}${LIGHT}Youtube : youtube.com/@nyarigratisan"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
+exit 0
+fi
 
 # Download File Ohp
 wget https://github.com/lfasmpao/open-http-puncher/releases/download/0.1/ohpserver-linux32.zip
@@ -28,7 +40,7 @@ cp ohpserver /usr/local/bin/ohpserver
 cat > /etc/systemd/system/ssh-ohp.service << END
 [Unit]
 Description=SSH OHP Redirection Service
-Documentation=https://t.me/Akbar218
+Documentation=https://t.me/anuybazoelk
 After=network.target nss-lookup.target
 
 [Service]
@@ -70,7 +82,7 @@ END
 cat > /etc/systemd/system/openvpn-ohp.service << END
 [Unit]]
 Description=OpenVPN OHP Redirection Service
-Documentation=https://t.me/Akbar218
+Documentation=https://t.me/anuybazoelk
 After=network.target nss-lookup.target
 
 [Service]
