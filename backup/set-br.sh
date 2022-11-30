@@ -27,11 +27,11 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/backup"
+anuyvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://${akbarvpn}/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://${anuyvpn}/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -60,7 +60,7 @@ wget -O autobackup "https://${anuyvpn}/autobackup.sh"
 wget -O backup "https://${anuyvpn}/backup.sh"
 wget -O restore "https://${anuyvpn}/restore.sh"
 wget -O strt "https://${anuyvpn}/strt.sh"
-wget -O limitspeed "https://${akbarvpn}/limitspeed.sh"
+wget -O limitspeed "https://${anuyvpn}/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
