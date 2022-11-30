@@ -16,7 +16,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/shadowsocks"
+anuyvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/shadowsocks"
 
 source /etc/os-release
 OS=$ID
@@ -106,10 +106,10 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O addss "https://${akbarvpn}/addss.sh"
-wget -O delss "https://${akbarvpn}/delss.sh"
-wget -O cekss "https://${akbarvpn}/cekss.sh"
-wget -O renewss "https://${akbarvpn}/renewss.sh"
+wget -O addss "https://${anuyvpn}/addss.sh"
+wget -O delss "https://${anuyvpn}/delss.sh"
+wget -O cekss "https://${anuyvpn}/cekss.sh"
+wget -O renewss "https://${anuyvpn}/renewss.sh"
 chmod +x addss
 chmod +x delss
 chmod +x cekss
