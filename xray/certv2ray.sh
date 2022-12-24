@@ -17,7 +17,7 @@ echo "Checking VPS"
 clear
 echo start
 sleep 0.5
-source /var/lib/anuy639/ipvps.conf
+source /var/lib/Anuy639/ipvps.conf
 domain=$IP
 systemctl enable xray.service
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
