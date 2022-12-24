@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 clear
-source /var/lib/anuy639/ipvps.conf
+source /var/lib/Anuy639/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
