@@ -61,7 +61,7 @@ END
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]]
 Description=Dropbear OHP Redirection Service
-Documentation=https://t.me/Akbar218
+Documentation=https://t.me/anuybazoelk
 After=network.target nss-lookup.target
 
 [Service]
