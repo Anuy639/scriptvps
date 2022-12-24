@@ -312,6 +312,6 @@ wget -O /usr/bin/addpptp https://${anuyvpn}/addpptp.sh && chmod +x /usr/bin/addp
 wget -O /usr/bin/delpptp https://${anuyvpn}/delpptp.sh && chmod +x /usr/bin/delpptp
 wget -O /usr/bin/renewpptp https://${anuyvpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
 wget -O /usr/bin/renewl2tp https://${anuyvpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-touch /var/lib/anuy639/data-user-l2tp
-touch /var/lib/anuy639/data-user-pptp
+touch /var/lib/Anuy639/data-user-l2tp
+touch /var/lib/Anuy639/data-user-pptp
 rm -f /root/ipsec.sh
