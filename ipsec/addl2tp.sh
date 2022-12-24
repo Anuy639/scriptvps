@@ -32,7 +32,7 @@ PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 else
 PUBLIC_IP=$IP
 fi
-source /var/lib/anuy639/ipvps.conf
+source /var/lib/Anuy639/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -40,7 +40,7 @@ domain=$IP2
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/anuy639/data-user-l2tp | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/Anuy639/data-user-l2tp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -66,7 +66,7 @@ EOF
 
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
-echo -e "### $VPN_USER $exp">>"/var/lib/anuy639/data-user-l2tp"
+echo -e "### $VPN_USER $exp">>"/var/lib/Anuy639/data-user-l2tp"
 cat <<EOF
 
 ============================
