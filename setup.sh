@@ -20,25 +20,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-nyarigratisan="raw.githubusercontent.com/anuy639/scriptvps/main/ssh"
+anuyvpn="raw.githubusercontent.com/anuy639/scriptvps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-nyarigratisan2="raw.githubusercontent.com/anuy639/scriptvps/main/sstp"
+anuyvpnn="raw.githubusercontent.com/anuy639/scriptvps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-nyarigratisan3="raw.githubusercontent.com/anuy639/scriptvps/main/ssr"
+anuyvpnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-nyarigratisan4="raw.githubusercontent.com/anuy639/scriptvps/main/shadowsocks"
+anuyvpnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-nyarigratisan5="raw.githubusercontent.com/anuy639/scriptvps/main/wireguard"
+anuyvpnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-nyarigratisan6="raw.githubusercontent.com/anuy639/scriptvps/main/xray"
+anuyvpnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-nyarigratisan7="raw.githubusercontent.com/anuy639/scriptvps/main/ipsec"
+anuyvpnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-nyarigratisan8="raw.githubusercontent.com/anuy639/scriptvps/main/backup"
+anuyvpnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-nyarigratisan9="raw.githubusercontent.com/anuy639/scriptvps/main/websocket"
+anuyvpnnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-nyarigratisan10="raw.githubusercontent.com/anuy639/scriptvps/main/ohp"
+anuyvpnnnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -61,25 +61,25 @@ echo "Script Already Installed"
 exit 0
 fi
 mkdir /var/lib/anuy639;
-echo "IP=" >> /var/lib/anuy639/ipvps.conf
+echo "IP=" >> /var/lib/Anuy639/ipvps.conf
 wget https://${anuyvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://${nyarigratisan}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${nyarigratisan2}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://${anuyvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://${anuyvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://${nyarigratisan3}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${nyarigratisan4}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://${anuyvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://${anuyvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://${nyarigratisan5}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://${anuyvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://${nyarigratisan6}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://${anuyvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install L2TP
-wget https://${nyarigratisan7}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${nyarigratisan8}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://${anuyvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://${anuyvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
-wget https://${nyarigratisan9}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${anuyvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://${nyarigratisan10}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${anuyvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -106,7 +106,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://${akbarvpn}/set.sh"
+wget -O /etc/set.sh "https://${anuyvpn}/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
