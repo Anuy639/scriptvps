@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/anuyba,oelk
+# My Telegram : https://t.me/anuybazoelk
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/Anuy639/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -69,10 +69,10 @@ echo -e "Expired       : $expi"
 echo -e "=============================="
 echo -e "Payload Websocket TLS"
 echo -e "=============================="
-echo -e "GET wss://bug.com [protocol][crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "CONNECT wss://${domain} [protocol][crlf]Host: BUG.COM[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
 echo -e "Payload Websocket No TLS"
 echo -e "=============================="
-echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "CONNECT / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
 echo -e "Script By Nyari Gratisan"
