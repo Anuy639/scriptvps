@@ -16,7 +16,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 clear
 read -rp "Domain/Host : " -e domain
-echo "IP=$domain" >>/var/lib/akbarstorevpn/ipvps.conf
+echo "IP=$domain" >>/var/lib/Anuy639/ipvps.conf
 echo $domain > /etc/xray/domain
 echo start
 systemctl stop xray.service
