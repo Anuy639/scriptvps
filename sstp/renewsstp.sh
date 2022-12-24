@@ -28,7 +28,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/Anuy639/data-user-sstp")
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
 	echo -e "==============================="
-	grep -E "^### " "/var/lib/akbarstorevpn/data-user-sstp" | cut -d ' ' -f 2-3 | nl -s ') '
+	grep -E "^### " "/var/lib/Anuy639/data-user-sstp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
 			read -rp "Select one client [1]: " CLIENT_NUMBER
