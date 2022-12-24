@@ -45,7 +45,7 @@ cp -r wireguard /etc/
 cp chap-secrets /etc/ppp/
 cp passwd1 /etc/ipsec.d/passwd
 cp ss.conf /etc/shadowsocks-libev/ss.conf
-cp -r anuy639 /var/lib/
+cp -r Anuy639 /var/lib/
 cp -r sstp /home/
 cp -r xray /etc/
 cp -r trojan-go /etc/
