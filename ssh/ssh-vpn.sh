@@ -1,4 +1,4 @@
-#!/bin/bash
+See#!/bin/bash
 # By Anuybazoelk639
 # My Telegram : https://t.me/anuybazoelk
 # ==========================================
@@ -46,7 +46,7 @@ commonname=Anuybazoelk639
 email=Anuybazoelk639@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${akbarvpn}/password"
+wget -O /etc/pam.d/common-password "https://${anuyvpn}/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -145,8 +145,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://${akbarvpn}/nginx.conf > /etc/nginx/nginx.conf
-curl https://${akbarvpn}/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://${anuyvpn}/nginx.conf > /etc/nginx/nginx.conf
+curl https://${anuyvpn}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -160,7 +160,7 @@ cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${akbarvpn}/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://${anuyvpn}/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -190,7 +190,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
+wget -O /etc/squid/squid.conf "https://${anuyvpn}/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -246,7 +246,7 @@ rm -rf /root/vnstat-2.6
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://${anuyvpnnnn}/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -291,8 +291,8 @@ cat key.pem cert.pem >> /etc/stunnel5/stunnel5.pem
 cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
-Documentation=https://stunnel.org
-Documentation=https://github.com/Akbar218
+Documentation=https://t.me/anuybazoelk
+Documentation=https://github.com/Anuy639
 After=syslog.target network-online.target
 
 [Service]
@@ -304,7 +304,7 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://${anuyvpnnnn}/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
@@ -329,7 +329,7 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${akbarvpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${anuyvpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -369,7 +369,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 wget https://${akbarvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${akbarvpn}/issue.net"
+wget -O /etc/issue.net "https://${anuyvpn}/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -390,51 +390,51 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${akbarvpn}/addhost.sh"
-wget -O about "https://${akbarvpn}/about.sh"
-wget -O menu "https://${akbarvpn}/menu.sh"
-wget -O addssh "https://${akbarvpn}/addssh.sh"
-wget -O trialssh "https://${akbarvpn}/trialssh.sh"
-wget -O delssh "https://${akbarvpn}/delssh.sh"
-wget -O member "https://${akbarvpn}/member.sh"
-wget -O delexp "https://${akbarvpn}/delexp.sh"
-wget -O cekssh "https://${akbarvpn}/cekssh.sh"
-wget -O restart "https://${akbarvpn}/restart.sh"
-wget -O speedtest "https://${akbarvpn}/speedtest_cli.py"
-wget -O info "https://${akbarvpn}/info.sh"
-wget -O ram "https://${akbarvpn}/ram.sh"
-wget -O renewssh "https://${akbarvpn}/renewssh.sh"
-wget -O autokill "https://${akbarvpn}/autokill.sh"
-wget -O ceklim "https://${akbarvpn}/ceklim.sh"
-wget -O tendang "https://${akbarvpn}/tendang.sh"
-wget -O clearlog "https://${akbarvpn}/clearlog.sh"
-wget -O changeport "https://${akbarvpn}/changeport.sh"
-wget -O portovpn "https://${akbarvpn}/portovpn.sh"
-wget -O portwg "https://${akbarvpn}/portwg.sh"
-wget -O porttrojan "https://${akbarvpn}/porttrojan.sh"
-wget -O portsstp "https://${akbarvpn}/portsstp.sh"
-wget -O portsquid "https://${akbarvpn}/portsquid.sh"
-wget -O portvlm "https://${akbarvpn}/portvlm.sh"
-wget -O wbmn "https://${akbarvpn}/webmin.sh"
-wget -O xp "https://${akbarvpn}/xp.sh"
-wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
-wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
-wget -O addvless "https://${akbarvpnn}/addvless.sh"
-wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
-wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
-wget -O delvless "https://${akbarvpnn}/delvless.sh"
-wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
-wget -O cekvmess "https://${akbarvpnn}/cekv2ray.sh"
-wget -O cekvless "https://${akbarvpnn}/cekvless.sh"
-wget -O cektrojan "https://${akbarvpnn}/cektrojan.sh"
-wget -O renewvmess "https://${akbarvpnn}/renewv2ray.sh"
-wget -O renewvless "https://${akbarvpnn}/renewvless.sh"
-wget -O renewtrojan "https://${akbarvpnn}/renewtrojan.sh"
-wget -O certv2ray "https://${akbarvpnn}/certv2ray.sh"
-wget -O addtrgo "https://${akbarvpnnn}/addtrgo.sh"
-wget -O deltrgo "https://${akbarvpnnn}/deltrgo.sh"
-wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
-wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
+wget -O addhost "https://${anuyvpn}/addhost.sh"
+wget -O about "https://${anuyvpn}/about.sh"
+wget -O menu "https://${anuyvpn}/menu.sh"
+wget -O addssh "https://${anuyvpn}/addssh.sh"
+wget -O trialssh "https://${anuyvpn}/trialssh.sh"
+wget -O delssh "https://${anuyvpn}/delssh.sh"
+wget -O member "https://${anuyvpn}/member.sh"
+wget -O delexp "https://${anuyvpn}/delexp.sh"
+wget -O cekssh "https://${anuyvpn}/cekssh.sh"
+wget -O restart "https://${anuyvpn}/restart.sh"
+wget -O speedtest "https://${anuyvpn}/speedtest_cli.py"
+wget -O info "https://${anuyvpn}/info.sh"
+wget -O ram "https://${anuyvpn}/ram.sh"
+wget -O renewssh "https://${anuyvpn}/renewssh.sh"
+wget -O autokill "https://${anuyvpn}/autokill.sh"
+wget -O ceklim "https://${anuyvpn}/ceklim.sh"
+wget -O tendang "https://${anuyvpn}/tendang.sh"
+wget -O clearlog "https://${anuyvpn}/clearlog.sh"
+wget -O changeport "https://${anuyvpn}/changeport.sh"
+wget -O portovpn "https://${anuyvpn}/portovpn.sh"
+wget -O portwg "https://${anuyvpn}/portwg.sh"
+wget -O porttrojan "https://${anuyvpn}/porttrojan.sh"
+wget -O portsstp "https://${anuyvpn}/portsstp.sh"
+wget -O portsquid "https://${anuyvpn}/portsquid.sh"
+wget -O portvlm "https://${anuyvpn}/portvlm.sh"
+wget -O wbmn "https://${anuyvpn}/webmin.sh"
+wget -O xp "https://${anuyvpn}/xp.sh"
+wget -O swapkvm "https://${anuyvpn}/swapkvm.sh"
+wget -O addvmess "https://${anuyvpnn}/addv2ray.sh"
+wget -O addvless "https://${anuyvpnn}/addvless.sh"
+wget -O addtrojan "https://${anuyvpnn}/addtrojan.sh"
+wget -O delvmess "https://${anuyvpnn}/delv2ray.sh"
+wget -O delvless "https://${anuyvpnn}/delvless.sh"
+wget -O deltrojan "https://${anuyvpnn}/deltrojan.sh"
+wget -O cekvmess "https://${anuyvpnn}/cekv2ray.sh"
+wget -O cekvless "https://${anuyvpnn}/cekvless.sh"
+wget -O cektrojan "https://${anuyvpnn}/cektrojan.sh"
+wget -O renewvmess "https://${anuyvpnn}/renewv2ray.sh"
+wget -O renewvless "https://${anuyvpnn}/renewvless.sh"
+wget -O renewtrojan "https://${anuyvpnn}/renewtrojan.sh"
+wget -O certv2ray "https://${anuyvpnn}/certv2ray.sh"
+wget -O addtrgo "https://${anuyvpnnn}/addtrgo.sh"
+wget -O deltrgo "https://${anuyvpnnn}/deltrgo.sh"
+wget -O renewtrgo "https://${anuyvpnnn}/renewtrgo.sh"
+wget -O cektrgo "https://${anuyvpnnn}/cektrgo.sh"
 chmod +x addhost
 chmod +x menu
 chmod +x addssh
@@ -505,15 +505,15 @@ chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/vnstat restart
 /etc/init.d/fail2ban restart
 /etc/init.d/squid restart
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 10000
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 10000
 history -c
 echo "unset HISTFILE" >> /etc/profile
 
