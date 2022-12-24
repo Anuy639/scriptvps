@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/anuyba,oelk
+# My Telegram : https://t.me/anuybazoelk
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 clear
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/anuy639/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
