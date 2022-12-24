@@ -16,9 +16,9 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 clear
 apt install jq curl -y
-DOMAIN=vpnku.tech
+DOMAIN=nyarigratisan.software
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.vpnku.tech
+SUB_DOMAIN=${sub}.nyarigratisan.software
 CF_ID=anuybazoelk639@gmail.com
 CF_KEY=5fea2f8e2c45da4658778bcd81497c5dfdf33
 set -euo pipefail
