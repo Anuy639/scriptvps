@@ -39,15 +39,15 @@ fi
 fi
 mkdir /home/sstp
 touch /home/sstp/sstp_account
-touch /var/lib/akbarstorevpn/data-user-sstp
+touch /var/lib/Anuy/data-user-sstp
 #detail nama perusahaan
-country=ID
-state=Indonesia
+country=BANJARBARU
+state=KALIMANTAN-SELATAN
 locality=Indonesia
-organization=akbarstorevpn
-organizationalunit=akbarstorevpn
-commonname=akbarstorevpn
-email=akbarssh21@gmail.com
+organization=NyariGratisan
+organizationalunit=Freefinder
+commonname=anuybazoelk639
+email=anuybazoelk639@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
@@ -59,7 +59,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget -O /etc/accel-ppp.conf "https://${akbarvpn}/accel.conf"
+wget -O /etc/accel-ppp.conf "https://${anuyvpn}/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
@@ -81,8 +81,8 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget -O /usr/bin/addsstp https://${akbarvpn}/addsstp.sh && chmod +x /usr/bin/addsstp
-wget -O /usr/bin/delsstp https://${akbarvpn}/delsstp.sh && chmod +x /usr/bin/delsstp
-wget -O /usr/bin/ceksstp https://${akbarvpn}/ceksstp.sh && chmod +x /usr/bin/ceksstp
-wget -O /usr/bin/renewsstp https://${akbarvpn}/renewsstp.sh && chmod +x /usr/bin/renewsstp
+wget -O /usr/bin/addsstp https://${anuyvpn}/addsstp.sh && chmod +x /usr/bin/addsstp
+wget -O /usr/bin/delsstp https://${anuyvpn}/delsstp.sh && chmod +x /usr/bin/delsstp
+wget -O /usr/bin/ceksstp https://${anuyvpn}/ceksstp.sh && chmod +x /usr/bin/ceksstp
+wget -O /usr/bin/renewsstp https://${anuyvpn}/renewsstp.sh && chmod +x /usr/bin/renewsstp
 rm -f /root/sstp.sh
