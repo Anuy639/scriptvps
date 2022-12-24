@@ -20,7 +20,7 @@ clear
 akbarvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/websocket"
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/websocket https://${akbarvpn}/websocket.py
+wget -q -O /usr/local/bin/websocket https://${anuyvpn}/websocket.py
 chmod +x /usr/local/bin/websocket
 
 # Installing Service
@@ -48,14 +48,14 @@ systemctl enable websocket
 systemctl restart websocket
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-ovpn https://${akbarvpn}/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn https://${anuyvpn}/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
-Description=Python Proxy Mod By LamVpn
-Documentation=https://t.me/LamVpn
+Description=Python Proxy Mod NyariGratisan
+Documentation=https://t.me/anuybazoelk
 After=network.target nss-lookup.target
 
 [Service]
