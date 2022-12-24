@@ -21,7 +21,7 @@ echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/anuy639/scriptvps/main/wireguard"
+anuyvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
