@@ -21,7 +21,7 @@ echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/AkbarStoreVPN/scriptvps/main/wireguard"
+akbarvpn="raw.githubusercontent.com/anuy639/scriptvps/main/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
@@ -40,7 +40,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script By Akbar Maulana"
+echo -e "${Info} Wireguard Script By Nyari Gratisan"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
