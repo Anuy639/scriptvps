@@ -53,7 +53,7 @@ echo ""
 echo "======================="
 echo "  Done Restart Webmin  "
 echo "======================="
-echo "Script By LamVpn"
+echo "Script By NyariGratisan"
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -68,7 +68,7 @@ echo ""
 echo "========================="
 echo "  Done Uninstall Webmin  "
 echo "========================="
-echo "Script By LamVpn"
+echo "Script By NyariGratisan"
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
