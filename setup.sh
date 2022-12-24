@@ -20,25 +20,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-anuyvpn="raw.githubusercontent.com/anuy639/scriptvps/main/ssh"
+anuyvpn="raw.githubusercontent.com/Anuy639/scriptvps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-anuyvpnn="raw.githubusercontent.com/anuy639/scriptvps/main/sstp"
+anuyvpnn="raw.githubusercontent.com/Anuy639/scriptvps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-anuyvpnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ssr"
+anuyvpnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-anuyvpnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/shadowsocks"
+anuyvpnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-anuyvpnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/wireguard"
+anuyvpnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-anuyvpnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/xray"
+anuyvpnnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-anuyvpnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ipsec"
+anuyvpnnnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-anuyvpnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/backup"
+anuyvpnnnnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-anuyvpnnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/websocket"
+anuyvpnnnnnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-anuyvpnnnnnnnnnn="raw.githubusercontent.com/anuy639/scriptvps/main/ohp"
+anuyvpnnnnnnnnnn="raw.githubusercontent.com/Anuy639/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -60,7 +60,7 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/anuy639;
+mkdir /var/lib/Anuy639;
 echo "IP=" >> /var/lib/Anuy639/ipvps.conf
 wget https://${anuyvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
